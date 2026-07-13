@@ -1,5 +1,7 @@
 # AlphaMind: AI-Powered Equity Research Agent
 
+Deployed URL:  https://alphamind-sswc.onrender.com/
+
 ## 📖 Overview
 AlphaMind is an intelligent, real-time investment research platform tailored for the Indian Stock Market (NSE/BSE). It aggregates live market data and historical price action, then leverages large language models (LLMs) to synthesize a comprehensive "Investment Committee Verdict". 
 
