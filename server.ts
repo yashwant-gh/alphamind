@@ -6,7 +6,8 @@ import { createServer as createViteServer } from "vite";
 import Groq from "groq-sdk";
 import yf from "yahoo-finance2";
 // @ts-ignore
-const yahooFinance = yf.default || yf;
+const YahooFinanceConstructor = yf.default || yf;
+const yahooFinance = new YahooFinanceConstructor();
 
 let aiClient: Groq | null = null;
 
@@ -113,7 +114,7 @@ const DEFAULT_FINANCIALS = {
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = parseInt(process.env.PORT || "3000", 10);
 
   const researchCache = new Map<string, any>();
 
