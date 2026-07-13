@@ -4,7 +4,9 @@ import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import Groq from "groq-sdk";
-import yahooFinance from "yahoo-finance2";
+import yf from "yahoo-finance2";
+// @ts-ignore
+const yahooFinance = yf.default || yf;
 
 let aiClient: Groq | null = null;
 
